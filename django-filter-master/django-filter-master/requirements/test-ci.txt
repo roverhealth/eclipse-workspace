@@ -1,7 +1,0 @@
-markdown==2.6.4
-coreapi
-django-crispy-forms
-
-coverage
-mock
-pytz
