@@ -1,0 +1,29 @@
+{% extends 'PriceMyVet/base.html' %}
+
+{% load static %}
+
+{% block body_block %}
+<div class="hero-unit">
+		<h2> Login to PriceMyVet </h2>
+		<div class="container">
+		<form class="form-signin span4" id="login_form" method="post" action="/PriceMyVet/login/">
+			{% csrf_token %}
+			{% if bad_details %}
+			<p><strong>Your username and/or password were incorrect!</strong></p>
+			{% elif disabled_account %}
+			<p><strong>Your account is currently disabled; we can't log you in!</strong></p>
+			<table>
+			{% endif %}
+			Username: <input type="text" class="input-block-level" placeholder="Username" name="username" value="" size"50"/>
+			Password: <input type="password" class="input-block-level" placeholder="Password" name="password" value="" size="50" />
+			<br />
+			<a href="/PriceMyVet/reset/">Forgot Password</a>
+			<br />
+			<label><input name="remember_me" type="checkbox" class="checkbox"> Keep me logged in </label>
+			<button class="btn btn-primary" type="submit">Sign in</button>
+			</table>
+		</form>
+	</div>
+	<!-- /container -->
+</div>
+{% endblock %}

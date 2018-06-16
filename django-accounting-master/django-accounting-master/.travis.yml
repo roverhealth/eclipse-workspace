@@ -1,0 +1,23 @@
+# Use the newer container-based infrastructure
+# http://docs.travis-ci.com/user/workers/container-based-infrastructure/
+sudo: false
+
+# Cache pip downloads
+cache:
+    directories:
+      - $HOME/.pip-cache/
+
+language: python
+
+python:
+    - '3.3'
+    - '3.4'
+
+install:
+    - pip install -e . -r requirements.txt
+
+script:
+    - make travis
+
+after_success:
+    - coveralls

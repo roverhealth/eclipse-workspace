@@ -1,0 +1,40 @@
+{% extends 'PriceMyVet/base.html' %}
+
+{% load static %}
+
+{% block body_block %}
+<div class="hero-unit">
+		<h1>Ready to code for PriceMyVet</h1>
+		<p>Find lower cost Vet services.</p>
+</div>
+<div class="row-fluid">
+	<div class="span6">
+		<h2>Service Search section</h2>
+		<!-- {% if categories %} -->
+		<!-- <ul> -->
+		<!-- 	{% for category in categories %} -->
+		<!-- 	<li> <a href="/rango/category/{{ category.url }}"> {{ category.name}} </a></li> -->
+		<!-- 	</li> -->
+		<!-- 	{% endfor %} -->
+		<!-- </ul> -->
+		<!-- {% else %} -->
+		<strong> Work in progress </strong> 
+		<!-- {% endif %} -->
+	</div>
+	<!--/span-->
+	<div class="span6">
+		<h2>Another section on home page </h2>
+		<!-- {% if pages %} -->
+		<!-- <ul> -->
+		<!-- 	{% for page in pages %} -->
+		<!-- 	<li><a href="{{ page.url}}">{{ page.title }}</a> - {{ page.category }} ({{ page.views }} view(s))</li> -->
+		<!-- 	{% endfor %} -->
+		<!-- </ul> -->
+		<!--  {% else %} -->
+		<strong> Still need to look into this section </strong>
+		<!-- {% endif %} -->
+	</div>
+	<!--/span -->
+</div>
+<!--/row-->
+{% endblock %}

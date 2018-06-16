@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% block body %}
+<div class="container">
+	<h1>Profile</h1>
+	<p>Username : {{ user }}</p>
+	<p>First Name: {{ user.first_name }}</p>
+	<p>Last Name: {{ user.last_name }}</p>
+	<p>Email: {{ user.email }}</p>
+	<p>Address: {{ user.userprofile.address }}</p>
+	<p>City: {{ user.userprofile.city }}</p>
+	<p>State: {{ user.userprofile.state }}</p>
+	<p>Zip Code: {{ user.userprofile.zip_code }}</p>
+	<p>Own a Pet: {{ user.userprofile.own_a_pet }}</p>
+	<p>Phone: {{ user.userprofile.phone_number }}</p>
+	<p>Fax: {{ user.userprofile.fax_number }}</p>
+	<p>Cell Number: {{ user.userprofile.cell_phone_number }}</p>
+	<p>Gender: {{ user.userprofile.gender }}</p>
+	<img src="{{ user.userprofile.image.url }}"  width="240">
+</div>
+{% endblock %}
+   
